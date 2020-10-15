@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleAddTaskForm } from '../actions/layoutActions';
-import { addItem } from '../actions/todoListActions';
+import { toggleAddTaskForm } from '../../actions/layoutActions';
+import { addItem } from '../../actions/todoListActions';
 
 const AddTaskForm = () => {
   const [name, setName] = useState('');

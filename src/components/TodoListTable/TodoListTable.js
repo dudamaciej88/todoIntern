@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import TodoListTableItem from './TodoListTableItem';
+import TodoListTableItem from './TodoListTableItem/TodoListTableItem'
 
 const TodoListTable = () => {
   const todoList = useSelector((state) => state.todoList);
@@ -15,7 +15,8 @@ const TodoListTable = () => {
       </thead>
       <tbody>
         {todoList.map((todo) => (
-          <TodoListTableItem key={todo.id}
+          <TodoListTableItem
+            key={todo.id}
             id={todo.id}
             name={todo.name}
             priority={todo.priority}

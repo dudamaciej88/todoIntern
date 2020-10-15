@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { deleteItem, updateItemDone } from '../actions/todoListActions';
+import { deleteItem, updateItemDone } from '../../../actions/todoListActions';
 
 const TodoListTableItem = ({ id, name, priority, done }) => {
   const dispatch = useDispatch();

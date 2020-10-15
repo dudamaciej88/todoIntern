@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleAddTaskForm } from '../actions/layoutActions';
-import AddTaskForm from '../components/AddTaskForm';
-import TodoListTable from '../components/TodoListTable';
+import AddTaskForm from '../components/AddTaskForm/AddTaskForm';
+import TodoListTable from '../components/TodoListTable/TodoListTable';
 
 const TodoListScreen = () => {
   const layout = useSelector((state) => state.layoutAddTaskForm);
