@@ -5,7 +5,7 @@ import { addItem } from '../../actions/todoListActions';
 
 const AddTaskForm = () => {
   const [name, setName] = useState('');
-  const [priority, setPriority] = useState('high');
+  const [priority, setPriority] = useState('High');
   const [nameValid, setNameValid] = useState(true);
 
   const dispatch = useDispatch();
@@ -48,9 +48,9 @@ const AddTaskForm = () => {
             onChange={(e) => setPriority(e.target.value)}
             value={priority}
           >
-            <option value='high'>High</option>
-            <option value='medium'>Medium</option>
-            <option value='low'>Low</option>
+            <option value='High'>High</option>
+            <option value='Medium'>Medium</option>
+            <option value='Low'>Low</option>
           </select>
           <button type='submit' disabled={!nameValid || name.length === 0}>
             Create
