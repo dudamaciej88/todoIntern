@@ -25,9 +25,7 @@ export const todoListReducer = (state = [], action) => {
           return item;
         }
       });
-      console.log(id, value);
-      console.log(updatedTodoList);
-      return [...state];
+      return [...updatedTodoList];
     default:
       return state;
   }
