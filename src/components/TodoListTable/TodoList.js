@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import TodoListTableItem from './TodoListTableItem/TodoListItem';
-import {Wrapper, ListHeaderWrapper, P, P2} from './TodoList.style';
+import { Wrapper, ListHeaderWrapper, P, P2 } from './TodoList.style';
 
 const TodoListTable = () => {
   const todoList = useSelector((state) => state.todoList);
