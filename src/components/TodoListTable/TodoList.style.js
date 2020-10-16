@@ -3,8 +3,10 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 80%;
+  //na malej rozdzielczosci dac 80%
+  max-width: 800px;
   margin: 100px auto;
+  border: 2px solid #70707054;
 `;
 
 export const ListHeaderWrapper = styled.div`
