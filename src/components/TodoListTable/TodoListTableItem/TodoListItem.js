@@ -1,7 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteItem, updateItemDone } from '../../../actions/todoListActions';
-import { ItemWrapper, P, DoneAndTrashWrapper } from './TodoListItem.style';
+import {
+  ItemWrapper,
+  P,
+  DoneAndTrashWrapper,
+  TrashIcon,
+} from './TodoListItem.style';
 
 const TodoListTableItem = ({ id, name, priority, done }) => {
   const dispatch = useDispatch();
@@ -21,7 +26,9 @@ const TodoListTableItem = ({ id, name, priority, done }) => {
             checked={done}
             onChange={(e) => dispatch(updateItemDone(id, !done))}
           />
-          <button onClick={() => dispatch(deleteItem(id))}>del</button>
+          <button onClick={() => dispatch(deleteItem(id))}>
+            <TrashIcon />
+          </button>
         </DoneAndTrashWrapper>
       </ItemWrapper>
     </>
