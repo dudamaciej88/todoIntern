@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleAddTaskForm } from '../../actions/layoutActions';
 import { addItem } from '../../actions/todoListActions';
+import { Wrapper, BtnsWrapper } from './AddTaskForm.style';
+import Button from '../Button/Button';
 
 const AddTaskForm = () => {
   const [name, setName] = useState('');
@@ -27,43 +29,43 @@ const AddTaskForm = () => {
   };
 
   return (
-    <div>
-      <div>
+    <Wrapper>
+      <form onSubmit={submitHandler}>
         <h2>Add Task</h2>
-        <form onSubmit={submitHandler}>
-          {!nameValid && <p>{`Task ${name} already exist`}</p>}
-          <label htmlFor='name'>Name:</label>
-          <input
-            required
-            type='text'
-            id='name'
-            placeholder='Enter task name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <label htmlFor='priority'>Choose Priority:</label>
-          <select
-            name='priority'
-            id='priority'
-            onChange={(e) => setPriority(e.target.value)}
-            value={priority}
-          >
-            <option value='High'>High</option>
-            <option value='Medium'>Medium</option>
-            <option value='Low'>Low</option>
-          </select>
-          <button type='submit' disabled={!nameValid || name.length === 0}>
-            Create
-          </button>
-          <button
+        {!nameValid && <p>{`Task ${name} already exist`}</p>}
+        <label htmlFor='name'>Name:</label>
+        <input
+          required
+          type='text'
+          id='name'
+          placeholder='Enter task name'
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        ></input>
+        <label htmlFor='priority'>Choose Priority:</label>
+        <select
+          name='priority'
+          id='priority'
+          onChange={(e) => setPriority(e.target.value)}
+          value={priority}
+        >
+          <option value='High'>High</option>
+          <option value='Medium'>Medium</option>
+          <option value='Low'>Low</option>
+        </select>
+        <BtnsWrapper>
+          <Button
             type='button'
             onClick={() => dispatch(toggleAddTaskForm(false))}
           >
             Cancel
-          </button>
-        </form>
-      </div>
-    </div>
+          </Button>
+          <Button type='submit' disabled={!nameValid || name.length === 0}>
+            Create
+          </Button>
+        </BtnsWrapper>
+      </form>
+    </Wrapper>
   );
 };
 
