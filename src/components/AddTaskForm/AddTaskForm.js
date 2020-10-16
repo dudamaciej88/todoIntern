@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleAddTaskForm } from '../../actions/layoutActions';
 import { addItem } from '../../actions/todoListActions';
-import { Wrapper, BtnsWrapper } from './AddTaskForm.style';
+import { Wrapper, BtnsWrapper, PError } from './AddTaskForm.style';
 import Button from '../Button/Button';
 
 const AddTaskForm = () => {
@@ -15,7 +15,7 @@ const AddTaskForm = () => {
   const todoList = useSelector((state) => state.todoList);
 
   useEffect(() => {
-    if (todoList.filter((task) => task.name === name).length > 0) {
+    if (todoList.filter((task) => task.name === name).length > 0 ) {
       setNameValid(false);
     } else {
       setNameValid(true);
@@ -32,7 +32,12 @@ const AddTaskForm = () => {
     <Wrapper>
       <form onSubmit={submitHandler}>
         <h2>Add Task</h2>
-        {!nameValid && <p>{`Task ${name} already exist`}</p>}
+        {!nameValid && (
+          <PError>{`Task ${name} already exist, change task name.`}</PError>
+        )}
+        {name.length > 40 && (
+          <PError>{`Task name is too long, max is 30 characters.`}</PError>
+        )}
         <label htmlFor='name'>Name:</label>
         <input
           required
@@ -60,7 +65,11 @@ const AddTaskForm = () => {
           >
             Cancel
           </Button>
-          <Button type='submit' disabled={!nameValid || name.length === 0}>
+          <Button
+            type='submit'
+            disabled={!nameValid || name.length === 0 || name.length > 40}
+            onClick={submitHandler}
+          >
             Create
           </Button>
         </BtnsWrapper>
