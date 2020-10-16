@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleAddTaskForm } from '../actions/layoutActions';
 import AddTaskForm from '../components/AddTaskForm/AddTaskForm';
 import TodoListTable from '../components/TodoListTable/TodoList';
+import Button from '../components/Button/Button';
 
 const TodoListScreen = () => {
   const layout = useSelector((state) => state.layoutAddTaskForm);
@@ -12,10 +13,10 @@ const TodoListScreen = () => {
     <>
       {layout.isVisible && <AddTaskForm />}
       <div>
-        <button onClick={() => dispatch(toggleAddTaskForm(true))}>
-          Add Task
-        </button>
-        <TodoListTable/>
+        <Button onClick={() => dispatch(toggleAddTaskForm(true))}>
+          Add New Task
+        </Button>
+        <TodoListTable />
       </div>
     </>
   );
