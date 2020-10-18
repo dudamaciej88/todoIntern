@@ -1,4 +1,4 @@
-import { SORT_SET, SORT_RESET } from '../constants/sortConstants';
+import { SORT_SET } from '../constants/sortConstants';
 
 export const setSort = (sortByValue, sortDirection) => (dispatch) => {
   dispatch({

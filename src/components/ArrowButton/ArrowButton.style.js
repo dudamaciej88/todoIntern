@@ -34,12 +34,12 @@ export const ArrowLeft = styled(rightArrow)`
 export const ArrowUp = styled(upArrow)`
   width: 1rem;
   height: 1rem;
-  fill: #707070;
+  fill: ${(props) => props.$active ? 'white' : '#707070'};
 `;
 
 export const ArrowDown = styled(upArrow)`
   width: 1rem;
   height: 1rem;
   transform: rotate(180deg);
-  fill: #707070;
+  fill: ${(props) => props.$active ? 'white' : '#707070'};
 `;

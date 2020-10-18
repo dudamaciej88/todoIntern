@@ -7,19 +7,19 @@ import {
   ArrowDown,
 } from './ArrowButton.style';
 
-const ArrowButton = ({ direction, onClick, disabled }) => {
+const ArrowButton = ({ direction, onClick, disabled, active }) => {
   const setArrow = (direction) => {
     switch (direction) {
       case 'up':
-        return <ArrowUp />;
+        return <ArrowUp $active={active} />;
       case 'down':
-        return <ArrowDown />;
+        return <ArrowDown $active={active} />;
       case 'left':
         return <ArrowLeft />;
       case 'right':
         return <ArrowRight />;
       default:
-        return <ArrowUp />;
+        return <ArrowUp $active={active} />;
     }
   };
 

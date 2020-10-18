@@ -1,4 +1,4 @@
-import { SORT_SET, SORT_RESET } from '../constants/sortConstants';
+import { SORT_SET } from '../constants/sortConstants';
 
 export const sortReducer = (state = {}, action) => {
   switch (action.type) {
@@ -7,8 +7,6 @@ export const sortReducer = (state = {}, action) => {
         by: action.payload.sortByValue,
         direction: action.payload.sortDirection,
       };
-    case SORT_RESET:
-      return {};
     default:
       return state;
   }
