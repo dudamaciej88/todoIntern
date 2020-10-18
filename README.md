@@ -1,4 +1,4 @@
-You can run this project on your machine by 'npm install' and then 'npm start' or you can see live demo here -> https://dudamaciej88.github.io/todoIntern/
+You can run this project on your machine by 'npm install' and then 'npm start' 
 
 ## Available Scripts
 
