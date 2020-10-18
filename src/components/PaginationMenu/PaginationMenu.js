@@ -1,7 +1,8 @@
 import React from 'react';
-import { Wrapper } from './PaginationMenu.style';
+import { Wrapper, Select } from './PaginationMenu.style';
 import { useDispatch, useSelector } from 'react-redux';
 import { setRowsPerPage, setPage } from '../../actions/paginationActions';
+import ArrowButton from '../ArrowButton/ArrowButton';
 
 const PaginationMenu = () => {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const PaginationMenu = () => {
   return (
     <Wrapper>
       <label htmlFor='rowsPerPage'>Rows per page:</label>
-      <select
+      <Select 
         name='rowsPerPage'
         id='rowsPerPage'
         onChange={(e) => dispatch(setRowsPerPage(e.target.value))}
@@ -27,21 +28,26 @@ const PaginationMenu = () => {
         <option value='5'>5</option>
         <option value='10'>10</option>
         <option value='15'>15</option>
-      </select>
+      </Select>
       {pagination.rowsPerPage * (pagination.page - 1) + 1} -{' '}
       {pagination.rowsPerPage * pagination.page > todoList.length
         ? todoList.length
         : pagination.rowsPerPage * pagination.page}{' '}
       of {todoList.length}
-      <button onClick={prevPageClickHandler} disabled={pagination.page === 1}>
+      <ArrowButton
+        direction={'left'}
+        onClick={prevPageClickHandler}
+        disabled={pagination.page === 1}
+      >
         left
-      </button>
-      <button
+      </ArrowButton>
+      <ArrowButton
+        direction={'right'}
         onClick={nextPageClickHandler}
-        disabled={pagination.rowsPerPage * pagination.page > todoList.length}
+        disabled={pagination.rowsPerPage * pagination.page >= todoList.length}
       >
         right
-      </button>
+      </ArrowButton>
     </Wrapper>
   );
 };
