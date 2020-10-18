@@ -6,8 +6,8 @@ import AddTaskForm from './components/AddTaskForm/AddTaskForm';
 function App() {
   return (
     <Router>
-      <Route path='/addtask' component={AddTaskForm} />
-      <Route path='/' component={TodoListScreen} />
+      <Route path='/addtask' component={AddTaskForm} exact />
+      <Route path='/' component={TodoListScreen} exact/>
     </Router>
   );
 }
