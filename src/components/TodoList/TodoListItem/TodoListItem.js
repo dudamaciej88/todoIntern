@@ -14,7 +14,7 @@ const TodoListTableItem = ({ id, name, priority, done }) => {
   return (
     <>
       <ItemWrapper>
-        <P grow={10}>{name}</P>
+        <P grow={10} style={{width: '100%'}}>{name}</P>
         <P grow={1}>{priority}</P>
         <DoneAndTrashWrapper grow={1}>
           <label style={{ position: 'absolute' }} htmlFor='checkbox'></label>
