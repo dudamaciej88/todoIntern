@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  //na malej rozdzielczosci dac 80%
+  width: 100%;
   max-width: 800px;
-  margin: 100px auto;
+  margin: 50px auto;
   border: 2px solid #70707054;
 `;
 
@@ -17,11 +17,15 @@ export const ListHeaderWrapper = styled.div`
   padding: 0 1rem;
 `;
 
+export const HeadNSort = styled.div`
+flex-grow: ${(props) => props.grow};
+display: flex;
+justify-content: flex-start;
+align-items: center;
+`
+
 export const P = styled.p`
-  flex-grow: ${(props) => props.grow};
   color: white;
 `;
 
-export const P2 = styled(P)`
-  width: 80px;
-`;
+

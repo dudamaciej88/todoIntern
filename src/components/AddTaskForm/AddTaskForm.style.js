@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   position: absolute;
   height: 100%;
   width: 100%;
-  max-width: 100%;
+  width: 100%;
   z-index: 100;
   background-color: white;
   & h2 {
@@ -20,13 +20,13 @@ export const Wrapper = styled.div`
     text-align: center;
   }
   & form {
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    max-width: 70%;
     min-width: 50%;
     border: 1px solid #e1e1e1;
     & label {
-      padding: 0.5rem 1rem;
+      padding: 1rem 1rem 0.2rem 1rem;
     }
     & input {
       padding: 0.5rem 1rem;
@@ -40,8 +40,13 @@ export const Wrapper = styled.div`
 `;
 
 export const BtnsWrapper = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem;
+`;
+
+export const PError = styled.p`
+  padding: 0rem 1rem;
+  color: red;
 `;
