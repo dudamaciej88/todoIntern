@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import TodoListTableItem from './TodoListItem/TodoListItem';
-import { Wrapper, ListHeaderWrapper, P, P2 } from './TodoList.style';
+import { Wrapper, ListHeaderWrapper, P, HeadNSort } from './TodoList.style';
 import SortMenu from '../SortMenu/SortMenu';
 import PaginationMenu from '../PaginationMenu/PaginationMenu';
 
@@ -63,12 +63,18 @@ const TodoList = () => {
   return (
     <Wrapper>
       <ListHeaderWrapper>
-        <P grow={10}>Task name</P>
-        <SortMenu sortByValue={'name'} />
-        <P2 grow={1}>Priority</P2>
-        <SortMenu sortByValue={'priority'} />
-        <P2 grow={1}>Done</P2>
-        <SortMenu sortByValue={'done'} />
+        <HeadNSort grow={10}>
+          <P>Task name</P>
+          <SortMenu sortByValue={'name'} />
+        </HeadNSort>
+        <HeadNSort style={{ width: '100px', maxWidth: '100px' }} grow={1}>
+          <P>Priority</P>
+          <SortMenu sortByValue={'priority'} />
+        </HeadNSort>
+        <HeadNSort style={{ width: '100px', maxWidth: '100px' }} grow={1}>
+          <P>Done</P>
+          <SortMenu sortByValue={'done'} />
+        </HeadNSort>
       </ListHeaderWrapper>
       <div>
         {paginatedList.map((todo) => (
