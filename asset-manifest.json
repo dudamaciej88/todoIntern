@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.33217300.chunk.css",
-    "main.js": "/static/js/main.e5fac932.chunk.js",
-    "main.js.map": "/static/js/main.e5fac932.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.33471999.js",
-    "runtime-main.js.map": "/static/js/runtime-main.33471999.js.map",
-    "static/js/2.a16bdc69.chunk.js": "/static/js/2.a16bdc69.chunk.js",
-    "static/js/2.a16bdc69.chunk.js.map": "/static/js/2.a16bdc69.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.90b29644682635f199edf309278cddb1.js": "/precache-manifest.90b29644682635f199edf309278cddb1.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.33217300.chunk.css.map": "/static/css/main.33217300.chunk.css.map",
-    "static/js/2.a16bdc69.chunk.js.LICENSE.txt": "/static/js/2.a16bdc69.chunk.js.LICENSE.txt",
-    "static/media/rightArrow.b79ac830.svg": "/static/media/rightArrow.b79ac830.svg",
-    "static/media/trashIcon.5dda1f39.svg": "/static/media/trashIcon.5dda1f39.svg",
-    "static/media/upArrow.03cb6a25.svg": "/static/media/upArrow.03cb6a25.svg"
+    "main.css": "/todoIntern/static/css/main.33217300.chunk.css",
+    "main.js": "/todoIntern/static/js/main.e5fac932.chunk.js",
+    "main.js.map": "/todoIntern/static/js/main.e5fac932.chunk.js.map",
+    "runtime-main.js": "/todoIntern/static/js/runtime-main.8128de01.js",
+    "runtime-main.js.map": "/todoIntern/static/js/runtime-main.8128de01.js.map",
+    "static/js/2.28207aa7.chunk.js": "/todoIntern/static/js/2.28207aa7.chunk.js",
+    "static/js/2.28207aa7.chunk.js.map": "/todoIntern/static/js/2.28207aa7.chunk.js.map",
+    "index.html": "/todoIntern/index.html",
+    "precache-manifest.963ed6e548f284e5e15ca3e11d2bf3cd.js": "/todoIntern/precache-manifest.963ed6e548f284e5e15ca3e11d2bf3cd.js",
+    "service-worker.js": "/todoIntern/service-worker.js",
+    "static/css/main.33217300.chunk.css.map": "/todoIntern/static/css/main.33217300.chunk.css.map",
+    "static/js/2.28207aa7.chunk.js.LICENSE.txt": "/todoIntern/static/js/2.28207aa7.chunk.js.LICENSE.txt",
+    "static/media/rightArrow.b79ac830.svg": "/todoIntern/static/media/rightArrow.b79ac830.svg",
+    "static/media/trashIcon.5dda1f39.svg": "/todoIntern/static/media/trashIcon.5dda1f39.svg",
+    "static/media/upArrow.03cb6a25.svg": "/todoIntern/static/media/upArrow.03cb6a25.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.33471999.js",
-    "static/js/2.a16bdc69.chunk.js",
+    "static/js/runtime-main.8128de01.js",
+    "static/js/2.28207aa7.chunk.js",
     "static/css/main.33217300.chunk.css",
     "static/js/main.e5fac932.chunk.js"
   ]
