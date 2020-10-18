@@ -1,14 +1,14 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import { layoutAddTaskFormReducer } from './reducers/layoutReducers';
 import { todoListReducer } from './reducers/todoListReducers';
 import { sortReducer } from './reducers/sortReducers';
+import { paginationReducer } from './reducers/paginationReducers';
 
 const reducer = combineReducers({
-  layoutAddTaskForm: layoutAddTaskFormReducer,
   todoList: todoListReducer,
   sort: sortReducer,
+  pagination: paginationReducer,
 });
 
 const todoListFromStorage = localStorage.getItem('todoList')
