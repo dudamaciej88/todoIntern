@@ -1,22 +1,20 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleAddTaskForm } from '../actions/layoutActions';
-import AddTaskForm from '../components/AddTaskForm/AddTaskForm';
-import TodoListTable from '../components/TodoListTable/TodoList';
-import Button from '../components/Button/Button';
+import { Link } from 'react-router-dom';
+import TodoList from '../components/TodoList/TodoList';
+
 
 const TodoListScreen = () => {
-  const layout = useSelector((state) => state.layoutAddTaskForm);
+  
 
-  const dispatch = useDispatch();
+  
   return (
     <>
-      {layout.isVisible && <AddTaskForm />}
+      
       <div>
-        <Button onClick={() => dispatch(toggleAddTaskForm(true))}>
+        <Link to='/addtask'>
           Add New Task
-        </Button>
-        <TodoListTable />
+        </Link>
+        <TodoList />
       </div>
     </>
   );
