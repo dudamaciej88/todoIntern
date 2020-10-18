@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addItem } from '../../actions/todoListActions';
 import { Wrapper, BtnsWrapper, PError } from './AddTaskForm.style';
 import Button from '../Button/Button';
-import {Link} from 'react-router-dom'
+import StyledLink from '../StyledLink/StyledLink.style';
 
 const AddTaskForm = ({history}) => {
   const [name, setName] = useState('');
@@ -59,11 +59,11 @@ const AddTaskForm = ({history}) => {
           <option value='Low'>Low</option>
         </select>
         <BtnsWrapper>
-          <Link
+          <StyledLink
             to='/'
           >
             Go Back
-          </Link>
+          </StyledLink>
           <Button
             type='submit'
             disabled={!nameValid || name.length === 0 || name.length > 40}
