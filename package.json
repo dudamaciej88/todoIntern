@@ -1,5 +1,6 @@
 {
   "name": "todolist",
+  "homepage": "https://dudamaciej88.github.io/todoIntern",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
