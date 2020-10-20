@@ -2,8 +2,6 @@
 
 https://dudamaciej88.github.io/todoIntern/
 
-You can run this project on your machine by 'npm install' and then 'npm start' 
-
 ## Available Scripts
 
 You can run this project on your machine by 'npm install' and then 'npm start'
